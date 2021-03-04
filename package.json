@@ -1,6 +1,6 @@
 {
   "name": "webiu-npm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "dependencies": {
     "@babel/core": "7.12.3",
