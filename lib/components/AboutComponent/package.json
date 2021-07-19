@@ -1,5 +1,5 @@
 {
     "private": true,
-    "name": "aboutcomponent",
-    "main": "./ButtonComponent"
+    "name": "AboutComponent",
+    "main": "./AboutComponent"
 }
