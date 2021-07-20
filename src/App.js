@@ -5,11 +5,14 @@ import { AboutComponent } from 'components/AboutComponent'
 import { AnnouncementComponent } from 'components/AnnouncementComponent'
 import { CardComponent } from 'components/CardComponent'
 import { ComingsoonComponent } from 'components/ComingsoonComponent'
+import { CarouselComponent } from 'components/CarouselComponent'
+import { DescriptionComponent } from 'components/DescriptionComponent'
+import { FaqComponent } from 'components/FaqComponent'
 
 export const App = () => {
     return (
       <div>
-        <ButtonComponent buttonText="Button" buttonWidth="400px" />
+        <ButtonComponent buttonText="Button" heading="Button Component" buttonWidth="400px" />
 
         <ContactComponent contactTitle="Contact us" subscribeTitle="Subscribe to News" contactMessage="Contact us" subscribeMessage="Subscribe to Newsletter" />
 
@@ -29,6 +32,23 @@ export const App = () => {
         
         <ComingsoonComponent header="Countdown" image="https://scorelab.org/images/joinTeam.png" buttonLink="/" countdownText="Coming soon!" 
                     deployDate="1 Jan, 2022 00:00:00" buttonText="Explore" message="The new version of this package is coming soon!" />
+
+        <CarouselComponent data={[{title: "LabelLab", content: "Lorem ipsum sample data",image: "https://scorelab.org/logos/projects/labellab.png"},
+                                  {title: "Dronesym", content: "Lorem ipsum sample data", image: "https://scorelab.org/logos/projects/dronesym.png"},
+                                  {title: "Senz", content: "Lorem ipsum sample data", image: "https://scorelab.org/logos/projects/senz.png"}]}
+                                  header="Carousel" />
+
+        <DescriptionComponent title="Description Container" subTitle="This component can be used to declare description regarding of a particular instance"
+                              image="https://scorelab.org/images/community.png"
+                              mainText="Your main text here"
+                              sideComponent={{content: "content of side component"}}/>
+
+        <FaqComponent header="Frequently Asked Questions"
+                      data={[{title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},
+                             {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},
+                             {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},
+                             {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},
+                             {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},]} />
       </div>
     )
 }
