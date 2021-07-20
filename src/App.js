@@ -9,6 +9,7 @@ import { CarouselComponent } from 'components/CarouselComponent'
 import { DescriptionComponent } from 'components/DescriptionComponent'
 import { FaqComponent } from 'components/FaqComponent'
 import { FooterComponent } from 'components/FooterComponent'
+import { HeaderComponent } from 'components/HeaderComponent'
 
 export const App = () => {
     return (
@@ -53,6 +54,9 @@ export const App = () => {
         
         <FooterComponent socialLinks={{facebook: "/", gitter: "/", twitter: "/", github: "/", 
                             linkedin:"/", medium:"/"}} mainText="Copyright © SCoRe Lab" />
+
+        <HeaderComponent mainText="WELCOME TO SCoRe LAB" subText="The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools." buttonText="Explore" buttonLink="/"
+                         image="https://scorelab.org/images/community.png" small={false} />
       
       </div>
     )
