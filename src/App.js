@@ -8,6 +8,7 @@ import { ComingsoonComponent } from 'components/ComingsoonComponent'
 import { CarouselComponent } from 'components/CarouselComponent'
 import { DescriptionComponent } from 'components/DescriptionComponent'
 import { FaqComponent } from 'components/FaqComponent'
+import { FooterComponent } from 'components/FooterComponent'
 
 export const App = () => {
     return (
@@ -49,6 +50,10 @@ export const App = () => {
                              {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},
                              {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},
                              {title: "Lorem ispum is a sample text which can be used to simply populate the data to check interface", content: "Lorem ispum is a sample text which can be used to simply populate the data to check interface"},]} />
+        
+        <FooterComponent socialLinks={{facebook: "/", gitter: "/", twitter: "/", github: "/", 
+                            linkedin:"/", medium:"/"}} mainText="Copyright © SCoRe Lab" />
+      
       </div>
     )
 }
