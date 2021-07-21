@@ -19,6 +19,8 @@ import { PageNotFound } from 'components/PageNotFound'
 import { Statistics } from 'components/Statistics'
 import { Spinners } from "components/Spinners"
 import { Stepper } from 'components/Stepper'
+import { GoogleMap } from 'components/GoogleMap'
+import { TrustedBy } from 'components/TrustedBy/TrustedBy'
 
 export const App = () => {
     return (
@@ -87,11 +89,22 @@ export const App = () => {
                     image="https://scorelab.org/images/community.png" data={[{name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}]} />
 
         <Spinners animation="border" variant="success" size="md"
-                  icon={true} spinner={true} />
+                  icon={true} spinner={true} image="https://scorelab.org/logos/main-logo.jpeg" />
 
         <Stepper direction="vertical" currentStep={2} steps={["Fork the Project", "Clone the Repo", "Local Setup", "Talk to Community", "Send PRs", "PRs get reviewed"]} />
 
         <Stepper direction="horizontal" currentStep={4} steps={["Fork the Project", "Clone the Repo", "Local Setup", "Talk to Community", "Send PRs", "PRs get reviewed"]} />
+        
+        <GoogleMap mapId="pb=!1m18!1m12!1m3!1d3650.1185838921524!2d86.43901351493429!3d23.814381884557864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bc9fac678481%3A0x122cb1d133a89995!2sIndian%20Institute%20of%20Technology%20(Indian%20School%20of%20Mines)%2C%20Dhanbad!5e0!3m2!1sen!2sin!4v1593296068669!5m2!1sen!2sin" header="Map" width="90%" height="500px" />
+
+        <TrustedBy title="Our Collaborators" column={2}
+                   description="Proud Collaborators and Industry Partners"
+                   data={[{img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/kotton.jpg", text: "Kotton"},
+                   {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/edge.jpg", text: "Edge"},
+                   {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/version2.jpg", text: "Version 2.0"},
+                   {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/noon.jpg", text: "Neon"},
+                   {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/jcnichols.jpg", text: "Nichollas"},
+                   {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/pet-wise.jpg", text: "Petwise"},]} />
 
       </div>
     )
