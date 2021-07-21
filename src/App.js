@@ -10,11 +10,16 @@ import { DescriptionComponent } from 'components/DescriptionComponent'
 import { FaqComponent } from 'components/FaqComponent'
 import { FooterComponent } from 'components/FooterComponent'
 import { HeaderComponent } from 'components/HeaderComponent'
+import { LetterAvatar } from 'components/LetterAvatar'
+import { ImageAvatar } from 'components/ImageAvatar'
+import { Partner } from 'components/Partner'
+import { SignupAndLogin } from 'components/SignupAndLogin'
+import { Pricing } from 'components/Pricing'
 
 export const App = () => {
     return (
       <div>
-        <ButtonComponent buttonText="Button" heading="Button Component" buttonWidth="400px" />
+        <ButtonComponent buttonText="Button" heading="Button Component" buttonWidth="350px" />
 
         <ContactComponent contactTitle="Contact us" subscribeTitle="Subscribe to News" contactMessage="Contact us" subscribeMessage="Subscribe to Newsletter" />
 
@@ -57,7 +62,21 @@ export const App = () => {
 
         <HeaderComponent mainText="WELCOME TO SCoRe LAB" subText="The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools." buttonText="Explore" buttonLink="/"
                          image="https://scorelab.org/images/community.png" small={false} />
+
+        <LetterAvatar name="Yash Vardhan" bgColor="green" />
+
+        <Partner header="Partner-With-Us" mainText="Collaborate with us" contactText="contact us" contactLink="/" buttonText="Form" buttonLink="/"
+                 image="https://scorelab.org/images/joinTeam.png" subText="The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools." />
+
+        <SignupAndLogin signupMessage="Signup" loginMessage="Login" handleSignup={() => {}} handleLogin={() => {}} />
+
+        <Pricing title="Subscription Charges" header="Pricing" description="sample-description"
+                 plans={[{plan: "BASIC", description: "sample", price: 30, items: ["Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample"], buttonText: "Explore", buttonLink: "/"},
+                         {plan: "ADVANCE", description: "sample", price: 40, items: ["Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample"], buttonText: "Explore", buttonLink: "/"},
+                         {plan: "PRO", description: "sample", price: 50, items: ["Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample"], buttonText: "Explore", buttonLink: "/"}]} />
       
+        <ImageAvatar image="https://yashvardhanportfolio.netlify.app/static/media/yash%20(2).ca34b90c.jpg" />
+
       </div>
     )
 }
