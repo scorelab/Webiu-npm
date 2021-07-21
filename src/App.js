@@ -18,6 +18,7 @@ import { Pricing } from 'components/Pricing'
 import { PageNotFound } from 'components/PageNotFound'
 import { Statistics } from 'components/Statistics'
 import { Spinners } from "components/Spinners"
+import { Stepper } from 'components/Stepper'
 
 export const App = () => {
     return (
@@ -86,7 +87,11 @@ export const App = () => {
                     image="https://scorelab.org/images/community.png" data={[{name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}]} />
 
         <Spinners animation="border" variant="success" size="md"
-                  icon={true} spinner={true} image="https://scorelab.org/logos/main-logo.jpeg" />
+                  icon={true} spinner={true} />
+
+        <Stepper direction="vertical" currentStep={2} steps={["Fork the Project", "Clone the Repo", "Local Setup", "Talk to Community", "Send PRs", "PRs get reviewed"]} />
+
+        <Stepper direction="horizontal" currentStep={4} steps={["Fork the Project", "Clone the Repo", "Local Setup", "Talk to Community", "Send PRs", "PRs get reviewed"]} />
 
       </div>
     )
