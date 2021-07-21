@@ -15,6 +15,8 @@ import { ImageAvatar } from 'components/ImageAvatar'
 import { Partner } from 'components/Partner'
 import { SignupAndLogin } from 'components/SignupAndLogin'
 import { Pricing } from 'components/Pricing'
+import { PageNotFound } from 'components/PageNotFound'
+import { Statistics } from 'components/Statistics'
 
 export const App = () => {
     return (
@@ -76,6 +78,11 @@ export const App = () => {
                          {plan: "PRO", description: "sample", price: 50, items: ["Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample", "Lorem Ipsum Text Example Sample"], buttonText: "Explore", buttonLink: "/"}]} />
       
         <ImageAvatar image="https://yashvardhanportfolio.netlify.app/static/media/yash%20(2).ca34b90c.jpg" />
+
+        <PageNotFound header="404 Component" image="https://scorelab.org/images/404.png" mainText="PAGE NOT FOUND" subText="The requested page does not exists" />
+
+        <Statistics header="Statistics" title="Numbers At a Glance" description="The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools."
+                    image="https://scorelab.org/images/community.png" data={[{name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}]} />
 
       </div>
     )
