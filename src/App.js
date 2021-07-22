@@ -23,6 +23,8 @@ import { GoogleMap } from 'components/GoogleMap'
 import { TrustedBy } from 'components/TrustedBy/TrustedBy'
 import { GuideLines } from 'components/Guidelines'
 import { ImageGrid } from "components/ImageGrid"
+import { SearchBar } from 'components/SearchBar'
+import { Testimonial } from 'components/Testimonial'
 
 export const App = () => {
     return (
@@ -113,6 +115,12 @@ export const App = () => {
 
         <ImageGrid size={6} images={[{imageUrl: "https://scorelab.org/images/community.png", imageText: "SCoRe Lab"}, {imageUrl: "https://scorelab.org/images/joinTeam.png", imageText: "OUR TEAM"}]} header="This is a sample heading" row={false}
                    categories={false} categoryData={[{text: "text", color: "#e52165", route: "/", image: "https://scorelab.org/images/community.png"}]} />
+
+        <SearchBar input={"sample-text"} handleSearch={() => console.log("Hello")} placeHolder="Search Items" header="Search Bar" />
+
+        <Testimonial header="Testimonial"
+                     data={[{name: "Yash", image: "https://desklib.com/static/src/assets/images/v2/profile_1.svg", description: "What does Lorem Ipsum mean? Derived from Latin dolorem ipsum (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic designers used to demonstrate graphic elements.", rating: "5"},
+                            {name: "Harshita", image: "https://desklib.com/static/src/assets/images/v2/profile_2.svg", description: "What does Lorem Ipsum mean? Derived from Latin dolorem ipsum (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic designers used to demonstrate graphic elements.", rating: "4"}]} />
 
       </div>
     )
