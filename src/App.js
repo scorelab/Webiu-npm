@@ -25,6 +25,8 @@ import { GuideLines } from 'components/Guidelines'
 import { ImageGrid } from "components/ImageGrid"
 import { SearchBar } from 'components/SearchBar'
 import { Testimonial } from 'components/Testimonial'
+import { Timestamp } from 'components/Timestamp'
+import { VideoPlayer } from 'components/VideoPlayer'
 
 export const App = () => {
     return (
@@ -121,6 +123,10 @@ export const App = () => {
         <Testimonial header="Testimonial"
                      data={[{name: "Yash", image: "https://desklib.com/static/src/assets/images/v2/profile_1.svg", description: "What does Lorem Ipsum mean? Derived from Latin dolorem ipsum (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic designers used to demonstrate graphic elements.", rating: "5"},
                             {name: "Harshita", image: "https://desklib.com/static/src/assets/images/v2/profile_2.svg", description: "What does Lorem Ipsum mean? Derived from Latin dolorem ipsum (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic designers used to demonstrate graphic elements.", rating: "4"}]} />
+
+        <Timestamp image="https://scorelab.org/images/community.png" firstName="SCoRe Lab" buttonText="Home" buttonLink="/" message="sample-message" />
+
+        <VideoPlayer width="560px" height="315px" videoSrcURL="https://www.youtube.com/embed/GuvAMcsoreI" title="Gatsby Js Tutorial" header="Video" />
 
       </div>
     )
