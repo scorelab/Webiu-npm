@@ -21,6 +21,8 @@ import { Spinners } from "components/Spinners"
 import { Stepper } from 'components/Stepper'
 import { GoogleMap } from 'components/GoogleMap'
 import { TrustedBy } from 'components/TrustedBy/TrustedBy'
+import { GuideLines } from 'components/Guidelines'
+import { ImageGrid } from "components/ImageGrid"
 
 export const App = () => {
     return (
@@ -89,7 +91,7 @@ export const App = () => {
                     image="https://scorelab.org/images/community.png" data={[{name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}, {name: "Users", stat: "10K"}]} />
 
         <Spinners animation="border" variant="success" size="md"
-                  icon={true} spinner={true} image="https://scorelab.org/logos/main-logo.jpeg" />
+                  icon={true} spinner={true} />
 
         <Stepper direction="vertical" currentStep={2} steps={["Fork the Project", "Clone the Repo", "Local Setup", "Talk to Community", "Send PRs", "PRs get reviewed"]} />
 
@@ -105,6 +107,12 @@ export const App = () => {
                    {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/noon.jpg", text: "Neon"},
                    {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/jcnichols.jpg", text: "Nichollas"},
                    {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/pet-wise.jpg", text: "Petwise"},]} />
+
+        <GuideLines heading="Guidelines" description="These are some guidelines"
+                    guidelines={["Introduce yourself to community", "Look for issues", "Resolve and PR"]} />
+
+        <ImageGrid size={6} images={[{imageUrl: "https://scorelab.org/images/community.png", imageText: "SCoRe Lab"}, {imageUrl: "https://scorelab.org/images/joinTeam.png", imageText: "OUR TEAM"}]} header="This is a sample heading" row={false}
+                   categories={false} categoryData={[{text: "text", color: "#e52165", route: "/", image: "https://scorelab.org/images/community.png"}]} />
 
       </div>
     )
