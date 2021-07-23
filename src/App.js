@@ -27,6 +27,8 @@ import { SearchBar } from 'components/SearchBar'
 import { Testimonial } from 'components/Testimonial'
 import { Timestamp } from 'components/Timestamp'
 import { VideoPlayer } from 'components/VideoPlayer'
+import { LinksList } from 'components/LinksList/LinksList'
+import { ProgressBar } from 'components/ProgressBar'
 
 export const App = () => {
     return (
@@ -118,7 +120,7 @@ export const App = () => {
         <ImageGrid size={6} images={[{imageUrl: "https://scorelab.org/images/community.png", imageText: "SCoRe Lab"}, {imageUrl: "https://scorelab.org/images/joinTeam.png", imageText: "OUR TEAM"}]} header="This is a sample heading" row={false}
                    categories={false} categoryData={[{text: "text", color: "#e52165", route: "/", image: "https://scorelab.org/images/community.png"}]} />
 
-        <SearchBar input={"sample-text"} handleSearch={() => console.log("Hello")} placeHolder="Search Items" header="Search Bar" />
+        <SearchBar handleSearch={() => console.log("Hello")} placeHolder="Search Items" header="Search Bar" />
 
         <Testimonial header="Testimonial"
                      data={[{name: "Yash", image: "https://desklib.com/static/src/assets/images/v2/profile_1.svg", description: "What does Lorem Ipsum mean? Derived from Latin dolorem ipsum (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic designers used to demonstrate graphic elements.", rating: "5"},
@@ -126,7 +128,14 @@ export const App = () => {
 
         <Timestamp image="https://scorelab.org/images/community.png" firstName="SCoRe Lab" buttonText="Home" buttonLink="/" message="sample-message" />
 
-        <VideoPlayer width="560px" height="315px" videoSrcURL="https://www.youtube.com/embed/GuvAMcsoreI" title="Gatsby Js Tutorial" header="Video" />
+        <VideoPlayer width="350px" height="215px" videoSrcURL="https://www.youtube.com/embed/GuvAMcsoreI" title="Gatsby Js Tutorial" header="Video" />
+
+        <LinksList links={[{"name": "Sample1", "url": "https://google.com"},
+                           {"name": "Sample2", "url": "https://google.com"},
+                           {"name": "Sample3", "url": "https://google.com"},]} 
+                   isIcon={true} iconName="faLink" />
+
+        <ProgressBar data={[{bgcolor: "#51ad28", completed: 80, text: "EXAMPLE 1"}, {bgcolor: "#E33F3F", completed: 60, text: "EXAMPLE 2"}, {bgcolor: "#24598B", completed: 90, text: "EXAMPLE 3"}]} colHeight={25} colWidth="300px" />
 
       </div>
     )
