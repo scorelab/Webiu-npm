@@ -29,6 +29,7 @@ import { Timestamp } from 'components/Timestamp'
 import { VideoPlayer } from 'components/VideoPlayer'
 import { LinksList } from 'components/LinksList/LinksList'
 import { ProgressBar } from 'components/ProgressBar'
+import { NavBar } from 'components/NavBar'
 
 export const App = () => {
     return (
@@ -136,6 +137,9 @@ export const App = () => {
                    isIcon={true} iconName="faLink" />
 
         <ProgressBar data={[{bgcolor: "#51ad28", completed: 80, text: "EXAMPLE 1"}, {bgcolor: "#E33F3F", completed: 60, text: "EXAMPLE 2"}, {bgcolor: "#24598B", completed: 90, text: "EXAMPLE 3"}]} colHeight={25} colWidth="300px" />
+
+        <NavBar logo="https://scorelab.org/logos/main-logo.jpeg"
+                links={[{path: "sample-link", isSpecial: false, isExternal: false, name: "Home"}, {path: "sample-link", isSpecial: false, isExternal: false, name: "Team"}, {path: "sample-link", isSpecial: false, isExternal: false, name: "Projects"}, {path: "sample-link", isSpecial: false, isExternal: false, name: "Services"}, {path: "sample-link", isSpecial: false, isExternal: false, name: "Pricing"}, {path: "sample-link", isSpecial: false, isExternal: false, name: "Contact"},]}  />
 
       </div>
     )
