@@ -32,6 +32,9 @@ import { ProgressBar } from 'components/ProgressBar'
 import { NavBar } from 'components/NavBar'
 import { GithubContributors } from 'components/GithubContributors'
 import { GithubOrg } from "components/GithubOrg"
+import { GithubOrgMembers } from "components/GithubOrgMembers"
+import { GithubRepo } from "components/GithubRepo"
+import { GithubUser } from "components/GithubUser"
 
 export const App = () => {
     return (
@@ -200,9 +203,16 @@ export const App = () => {
                         {path: "sample-link", isSpecial: true, isExternal: false, name: "Contact"},]}  />
 
         <GithubContributors projectname="scorelab/webiu" title="Contributors of" limit={10}
-                            auth_token="sample-token" showSearchBar={true} />
+                            auth_token="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" showSearchBar={true} />
 
-        <GithubOrg orgname="scorelab" title="GitHub Organization" limit={12} auth_token="sample-token" />
+        <GithubOrg orgname="scorelab" title="GitHub Organization" limit={12} auth_token="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" />
+
+        <GithubOrgMembers orgname="scorelab" title="GitHub Community of" limit={10}
+                          auth_token="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" showSearchBar={true} />
+
+        <GithubRepo reponame="scorelab/webiu" title="GitHub Repository" auth_token="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" />
+
+        <GithubUser username="grumpyyash" title="Github Profile" auth_token="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" />
 
       </div>
     )

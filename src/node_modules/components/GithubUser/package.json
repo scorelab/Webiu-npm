@@ -1,0 +1,5 @@
+{
+    "private": true,
+    "name": "GithubUser",
+    "main": "./GithubUser"
+}
