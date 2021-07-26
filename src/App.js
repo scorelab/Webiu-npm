@@ -30,6 +30,8 @@ import { VideoPlayer } from 'components/VideoPlayer'
 import { LinksList } from 'components/LinksList/LinksList'
 import { ProgressBar } from 'components/ProgressBar'
 import { NavBar } from 'components/NavBar'
+import { GithubContributors } from 'components/GithubContributors'
+import { GithubOrg } from "components/GithubOrg"
 
 export const App = () => {
     return (
@@ -196,6 +198,11 @@ export const App = () => {
                         {path: "sample-link", isSpecial: false, isExternal: false, name: "Services"}, 
                         {path: "sample-link", isSpecial: false, isExternal: true, name: "Pricing"}, 
                         {path: "sample-link", isSpecial: true, isExternal: false, name: "Contact"},]}  />
+
+        <GithubContributors projectname="scorelab/webiu" title="Contributors of" limit={10}
+                            auth_token="sample-token" showSearchBar={true} />
+
+        <GithubOrg orgname="scorelab" title="GitHub Organization" limit={12} auth_token="sample-token" />
 
       </div>
     )
