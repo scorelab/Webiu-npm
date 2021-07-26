@@ -203,16 +203,16 @@ export const App = () => {
                         {path: "sample-link", isSpecial: true, isExternal: false, name: "Contact"},]}  />
 
         <GithubContributors projectname="scorelab/webiu" title="Contributors of" limit={10}
-                            auth_token="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" showSearchBar={true} />
+                            auth_token="sample-token" showSearchBar={true} />
 
-        <GithubOrg orgname="scorelab" title="GitHub Organization" limit={12} auth_token="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" />
+        <GithubOrg orgname="scorelab" title="GitHub Organization" limit={12} auth_token="sample-token" />
 
         <GithubOrgMembers orgname="scorelab" title="GitHub Community of" limit={10}
-                          auth_token="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" showSearchBar={true} />
+                          auth_token="sample-token" showSearchBar={true} />
 
-        <GithubRepo reponame="scorelab/webiu" title="GitHub Repository" auth_token="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" />
+        <GithubRepo reponame="scorelab/webiu" title="GitHub Repository" auth_token="sample-token" />
 
-        <GithubUser username="grumpyyash" title="Github Profile" auth_token="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" />
+        <GithubUser username="grumpyyash" title="Github Profile" auth_token="sample-token" />
 
       </div>
     )
