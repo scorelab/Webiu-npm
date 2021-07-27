@@ -38,6 +38,9 @@ import { GithubUser } from "components/GithubUser"
 import { GitterRoomsList } from 'components/GitterRoomsList'
 import { GsocIdeaList } from "components/GsocIdeaList"
 import { JobOpenings } from 'components/JobOpenings'
+import { ListPagination } from "components/ListPagination"
+import { MediumFeed } from 'components/MediumFeed/MediumFeed'
+import { MailingListFeed } from 'components/MailingListFeed'
 
 export const App = () => {
     return (
@@ -235,6 +238,13 @@ export const App = () => {
                                  skillRequirements: ["Python", "Flask", "Data Science", "NLP", "OpenCV"]},
                                  {title: "sample-title", description: "sample-description", applyLink:"https://www.google.com", 
                                  skillRequirements: ["Python", "Flask", "Data Science", "NLP", "OpenCV"]}]} />
+
+        <ListPagination pageSize={8} total={24} onChange={()=>{}} />
+
+        <MediumFeed title="Recent Blogs" mediumUrl="https://medium.com/feed/scorelab" small={false} limit={6}/>
+
+        <MailingListFeed title="Mailing List Feed" feedUrl="https://groups.google.com/forum/feed/score-community/msgs/rss.xml?num=50" 
+                         small={false} />
 
       </div>
     )
