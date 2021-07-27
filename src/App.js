@@ -35,6 +35,9 @@ import { GithubOrg } from "components/GithubOrg"
 import { GithubOrgMembers } from "components/GithubOrgMembers"
 import { GithubRepo } from "components/GithubRepo"
 import { GithubUser } from "components/GithubUser"
+import { GitterRoomsList } from 'components/GitterRoomsList'
+import { GsocIdeaList } from "components/GsocIdeaList"
+import { JobOpenings } from 'components/JobOpenings'
 
 export const App = () => {
     return (
@@ -213,6 +216,25 @@ export const App = () => {
         <GithubRepo reponame="scorelab/webiu" title="GitHub Repository" auth_token="sample-token" />
 
         <GithubUser username="grumpyyash" title="Github Profile" auth_token="sample-token" />
+
+        <GitterRoomsList title="Gitter Room List" gitterOrganizationName="SCoRe Lab" groupId="57542d64c43b8c601977c479" 
+                         gitterToken="4d6b01370f1f21d7314b96c21f31a28ea06d0c66" small={false} limit={9} />
+
+        <GsocIdeaList heading="GSoC IdeaList" defaultActiveKeys={['0']}
+                      description="Lorem ipsum sample description fot the idea list of the organization for google summer of code participation" 
+                      listItems={[{title: "sample", description: "sample", expectedresults: "sample", possiblementors: "sample", requiredknowledge: "sample", githuburl: "sample"},
+                                  {title: "sample", description: "sample", expectedresults: "sample", possiblementors: "sample", requiredknowledge: "sample", githuburl: "sample"}]}
+                      previousProjects={[{year: "2020", link: "sample-link"},
+                                        {year: "2019", link: "sample-link"},
+                                        {year: "2018", link: "sample-link"},
+                                        {year: "2017", link: "sample-link"}]}
+                />
+
+        <JobOpenings title="Current Openings" 
+                     openings={[{title: "sample-title", description: "sample-description", applyLink:"https://www.google.com", 
+                                 skillRequirements: ["Python", "Flask", "Data Science", "NLP", "OpenCV"]},
+                                 {title: "sample-title", description: "sample-description", applyLink:"https://www.google.com", 
+                                 skillRequirements: ["Python", "Flask", "Data Science", "NLP", "OpenCV"]}]} />
 
       </div>
     )
