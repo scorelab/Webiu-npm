@@ -44,6 +44,8 @@ import { MailingListFeed } from 'components/MailingListFeed'
 import { ProjectsList } from "components/ProjectsList"
 import { ProjectDetail } from 'components/ProjectDetail'
 import { PublicationsList } from "components/PublicationsList"
+import { Timeline } from 'components/Timeline'
+import { Team } from "components/Team"
 
 export const App = () => {
     return (
@@ -279,6 +281,20 @@ export const App = () => {
                                    authors: ["Amila Karunanayke", "Kasun De Zoysa", "Sead Muftic"], slug: "/"},
                                   {title : "Mobile ATM for developing countries", conference: "Computer Science and Education(ICCSE), 2013 8th International Conference on - 2013", 
                                    authors: ["Amila Karunanayke", "Kasun De Zoysa", "Sead Muftic"], slug: "/"}]} />
+
+        <Timeline header="Timeline component" height="1200px"
+                  data={[{text: 'Choose the Organization', date: 'July 23 2021', category: {tag: 'GSoC', color:'black'}, link: {url: '/', text: 'Explore'}},
+                         {text: 'Set up project', date: 'July 24 2021', category: {tag: 'GSoC', color:'orange'}, link: {url: '/', text: 'Explore'}},
+                         {text: 'Open a Pull Request', date: 'July 25 2021', category: {tag: 'GSoC', color:'red'}, link: {url: '/', text: 'Explore'}},
+                         {text: 'Code gets merged', date: 'July 26 2021', category: {tag: 'GSoC', color:'green'}, link: {url: '/', text: 'Explore'}},]} />
+
+        <Team
+                title="Team Component" showSearchBar={true}
+                contributors={[{name: "Chathura Suduwella", title: "BSc Joint Major", image: ""}, {name: "Charith Elvitigala", title: "BSc in Computer Science", image: ""}, {name: "Namal Jayasuriya", title: "BSc in Computer Science", image: ""}, {name: "Kasun De Zoysa", title: "SCoRe Contributor", image: ""}]}
+                alumni={[{name: "Chathura Suduwella", title: "BSc Joint Major", image: ""}, {name: "Charith Elvitigala", title: "BSc in Computer Science", image: ""}, {name: "Namal Jayasuriya", title: "BSc in Computer Science", image: ""}]}
+                heads={[{name: "Chathura Suduwella", title: "BSc Joint Major", image: ""}, {name: "Charith Elvitigala", title: "BSc in Computer Science", image: ""}]}
+                researchers={[{name: "Chathura Suduwella", title: "BSc Joint Major", image: ""}, {name: "Charith Elvitigala", title: "BSc in Computer Science", image: ""}, {name: "Namal Jayasuriya", title: "BSc in Computer Science", image: ""}]}
+        />
 
       </div>
     )
