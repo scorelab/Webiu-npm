@@ -29,6 +29,8 @@ h6 {
 }
 p {
     font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: black;
 }
 div {
     font-family: 'Montserrat', sans-serif; 

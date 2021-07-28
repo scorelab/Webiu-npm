@@ -41,6 +41,9 @@ import { JobOpenings } from 'components/JobOpenings'
 import { ListPagination } from "components/ListPagination"
 import { MediumFeed } from 'components/MediumFeed/MediumFeed'
 import { MailingListFeed } from 'components/MailingListFeed'
+import { ProjectsList } from "components/ProjectsList"
+import { ProjectDetail } from 'components/ProjectDetail'
+import { PublicationsList } from "components/PublicationsList"
 
 export const App = () => {
     return (
@@ -245,6 +248,37 @@ export const App = () => {
 
         <MailingListFeed title="Mailing List Feed" feedUrl="https://groups.google.com/forum/feed/score-community/msgs/rss.xml?num=50" 
                          small={false} />
+
+        <ProjectsList title="Projects" showSearchBar={true} searchPlaceHolder="Search Projects" limit={10}
+                     items={[{title: "Bassa", description: "Lorem ispum text is a very popular tool to fill sampel data with some random text. Its origin can be attributed to a long time ago with its neccesity", 
+                              image: "https://scorelab.org/logos/projects/bassa.png", slug: "/basaa"},
+                             {title: "ASSET", description: "Lorem ispum text is a very popular tool to fill sampel data with some random text. Its origin can be attributed to a long time ago with its neccesity", 
+                              image: "https://scorelab.org/logos/projects/asset.png", slug: "/asset"},
+                             {title: "DroneSym", description: "Lorem ispum text is a very popular tool to fill sampel data with some random text. Its origin can be attributed to a long time ago with its neccesity", 
+                              image: "https://scorelab.org/logos/projects/dronesym.png", slug: "/dronesym"},
+                             {title: "Elly", description: "Lorem ispum text is a very popular tool to fill sampel data with some random text. Its origin can be attributed to a long time ago with its neccesity", 
+                              image: "https://scorelab.org/logos/projects/elly.png", slug: "/elly"},
+                             {title: "D4D", description: "Lorem ispum text is a very popular tool to fill sampel data with some random text. Its origin can be attributed to a long time ago with its neccesity", 
+                              image: "https://scorelab.org/logos/projects/d4d.png", slug: "/d4d"},
+                             {title: "Parks", description: "Lorem ispum text is a very popular tool to fill sampel data with some random text. Its origin can be attributed to a long time ago with its neccesity", 
+                              image: "https://scorelab.org/logos/projects/parks.png", slug: "/parks"},]} />
+
+        <ProjectDetail project={{image: "https://scorelab.org/logos/projects/bassa.png",
+                                title: "Bassa",
+                                description: "Bassa is automated Download Queue for Enterprise to take the best use of Internet bandwidth. It solves the problem of wasting internet bandwidth by queuing a download if it is larger than a given threshold value in high traffic and when the traffic is low, it completes the download of the files.",
+                                screenshots: [{imageUrl: "https://scorelab.org/images/screenshots/Bassa/1.png"}, {imageUrl: "https://scorelab.org/images/screenshots/Bassa/2.png"}],
+                                links: [{url: "https://github.com/scorelab/Bassa", name: "Github Repo"}, {url: "https://gitter.im/scorelab/Bassa", name: "Gitter Channel"}]}}
+                                />
+
+        <PublicationsList title="Research Journels" limit={10} suffle={false} publications={true} achievements={false}
+                          items={[{title : "Mobile ATM for developing countries", conference: "Computer Science and Education(ICCSE), 2013 8th International Conference on - 2013", 
+                                   authors: ["Amila Karunanayke", "Kasun De Zoysa", "Sead Muftic"], slug: "/"},
+                                  {title : "Mobile ATM for developing countries", conference: "Computer Science and Education(ICCSE), 2013 8th International Conference on - 2013", 
+                                   authors: ["Amila Karunanayke", "Kasun De Zoysa", "Sead Muftic"], slug: "/"},
+                                  {title : "Mobile ATM for developing countries", conference: "Computer Science and Education(ICCSE), 2013 8th International Conference on - 2013", 
+                                   authors: ["Amila Karunanayke", "Kasun De Zoysa", "Sead Muftic"], slug: "/"},
+                                  {title : "Mobile ATM for developing countries", conference: "Computer Science and Education(ICCSE), 2013 8th International Conference on - 2013", 
+                                   authors: ["Amila Karunanayke", "Kasun De Zoysa", "Sead Muftic"], slug: "/"}]} />
 
       </div>
     )
