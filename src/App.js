@@ -1,6 +1,6 @@
 import React from 'react'
-import {ButtonComponent} from 'components/ButtonComponent'
-import {ContactComponent} from 'components/ContactComponent'
+import { ButtonComponent } from 'components/ButtonComponent'
+import { ContactComponent } from 'components/ContactComponent'
 import { AboutComponent } from 'components/AboutComponent'
 import { AnnouncementComponent } from 'components/AnnouncementComponent'
 import { CardComponent } from 'components/CardComponent'
@@ -21,7 +21,7 @@ import { Spinners } from "components/Spinners"
 import { Stepper } from 'components/Stepper'
 import { GoogleMap } from 'components/GoogleMap'
 import { TrustedBy } from 'components/TrustedBy'
-import { GuideLines } from 'components/Guidelines'
+import { Guidelines } from 'components/Guidelines'
 import { ImageGrid } from "components/ImageGrid"
 import { SearchBar } from 'components/SearchBar'
 import { Testimonial } from 'components/Testimonial'
@@ -46,6 +46,8 @@ import { ProjectDetail } from 'components/ProjectDetail'
 import { PublicationsList } from "components/PublicationsList"
 import { Timeline } from 'components/Timeline'
 import { Team } from "components/Team"
+import { SocialMedia } from 'components/SocialMedia'
+import { Typewriter } from 'components/Typewriter'
 
 export const App = () => {
     return (
@@ -172,7 +174,7 @@ export const App = () => {
                    {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/jcnichols.jpg", text: "Nichollas"},
                    {img: "https://deliciousthemes.com/wp-content/uploads/black-and-white-logos/pet-wise.jpg", text: "Petwise"},]} />
 
-        <GuideLines heading="Guidelines" description="These are some guidelines"
+        <Guidelines heading="Guidelines" description="These are some guidelines"
                     guidelines={["Introduce yourself to community", "Look for issues", "Resolve and PR"]} />
        
         <ProgressBar data={[{bgcolor: "#51ad28", completed: 80, text: "EXAMPLE 1"}, 
@@ -295,6 +297,12 @@ export const App = () => {
                 heads={[{name: "Chathura Suduwella", title: "BSc Joint Major", image: ""}, {name: "Charith Elvitigala", title: "BSc in Computer Science", image: ""}]}
                 researchers={[{name: "Chathura Suduwella", title: "BSc Joint Major", image: ""}, {name: "Charith Elvitigala", title: "BSc in Computer Science", image: ""}, {name: "Namal Jayasuriya", title: "BSc in Computer Science", image: ""}]}
         />
+
+        <SocialMedia facebookProfile="SCoRe.Lab.Org" twitterProfile="gsoc"
+                     header="Facebook and Twitter" width="330px" height="340px" />
+
+        <Typewriter header="Typewriter" wait={100} color="" staticText="I AM A"
+                    words={["DEVELOPER", "PROGRAMMER", "DEBUGGER"]} />
 
       </div>
     )
