@@ -1,6 +1,8 @@
 @import '../../styles/variables.sass'
 
-
+.about-component
+  margin-top: 20px
+  margin-bottom: 20px
 .header-component
   background-image: url("../ContactComponent/images/dots.png")
   padding: 35px
@@ -10,7 +12,7 @@
 .icon
   color: $primary
 .about-us
-  padding: 35px
+  padding: 15px
   background-color: $light-secondary
 .about-content-section
   @media #{$xs-and-less}
@@ -21,10 +23,10 @@
   flex-direction: column
   justify-content: center
   align-items: flex-start
-  p
+  .about-para
     font-size: 14px
     line-height: 25px
-  h1
+  .about-h1
     font-weight: 400
     padding-top: 15px
     font-size: 36px
@@ -34,10 +36,12 @@
 .btn
   margin: 10px 0 10px 0
   background-color: $secondary
-  color: #fff
-  font-size: 14px
+  color: white
+  font-size: 10px
   padding: 5px 25px
   text-align: center
+  .about-span
+    color: white
 
 .right-col
   text-align: center
