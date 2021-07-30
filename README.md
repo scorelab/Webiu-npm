@@ -10,14 +10,18 @@ Website built with Webiu: https://www.scorelab.org/
 
 ## About the webiu-npm package
 
-This repository holds the codebase for the NPM module of all components of webiu. All the components will be added simultaneously as time progresses. The NPM package can be downloaded from the NPM registry: https://www.npmjs.com/package/webiu-npm
+This package is a collection of a lot of pre-built and general components which are often used in websites. All the components have been added to it and it will get updated as more components are created.The package can be downloaded from the npm registry:
+https://www.npmjs.com/package/webiu-npm
+
+Also, for explaing the use-cases of this package, you can refer to an example project built using this package:
+https://github.com/Grumpyyash/webiu-npm-test
 
 ## How to include this package in your project
 
 Go to the official npm store
-`https://www.npmjs.com/package/webiu-npm`
+https://www.npmjs.com/package/webiu-npm
 
-Download the package from the NPM registry
+Install the package
 `npm install webiu-npm`
 
 ## How to use this package
@@ -28,6 +32,8 @@ There are a lot of pre-built components which you can include in your next proje
 <SignupAndLogin signupMessage="Signup" loginMessage="Login" handleSignup={() => {}} handleLogin={() => {}} />
 ```
 
-All the components are highly reusable via props. You can just explore all the components and their use-cases from its official project directory `https://github.com/scorelab/Webiu`
+All the components are highly reusable via props.
+You can just explore all the components and their use-cases from its official project directory:
+https://github.com/scorelab/Webiu
 
 May the source be with you!
